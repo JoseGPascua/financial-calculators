@@ -52,12 +52,44 @@
   
   <!-- Create the basic main page layout with a brief description and a link to each calculator -->
   <main>
-    
+    <div class="container my-3 py-3">
+        <h1 class="text-center">Mortage Calculator</h1>
+    </div>
+    <!-- Section inputs information from user -->
+    <section class="container border py-3">
+        <h5 class="text-center mb-3">Input your Loan information</h5>
+        <div class="row">
+            <div class="col-6">
+                <label for="principal-amount" class="form-label">Principal Loan Amount</label>
+                <div class="input-group mb-3">
+                    <input id="principal-amount" type="text" class="form-control" placeholder="Enter Loan Amount">
+                </div>
+            </div>
+            <div class="col-3">
+                <label for="interest-rate" class="form-label">Interest Rate</label>
+                <div class="input-group mb-3">
+                    <input id="interest-rate" type="text" class="form-control" placeholder="Enter Interest Rate">
+                </div>
+            </div>
+            <div class="col-3">
+                <label for="loan-length" class="form-label">Length of Loan</label>
+                <div class="input-group mb-3">
+                    <input id="loan-length" type="text" class="form-control" placeholder="Enter in Years">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button id="calculate-Btn" type="button" class="btn btn-primary">Calculate</button>
+            </div>
+        </div>
+        <p class="my-3" id="output1"></p>
+    </section>
 
   </main>
 
   <!-- Add your JS here -->
-  <script src="scripts/app.js"></script>
+  <script src="scripts/mortgage.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
