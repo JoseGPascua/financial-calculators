@@ -1,10 +1,5 @@
 "use strict";
 
-//
-//
-//
-
-
 //Create a function that calculates present value and include a display message
 function calculateFunction() {
     //Input - Intitialize the variables
@@ -19,7 +14,7 @@ function calculateFunction() {
     const presentValue = (payout * (1 - Math.pow(1 + interestMonthly, -totalPayments))) / interestMonthly;
 
 
-    //Output Dislaying a message on HTML or in a alert
+    //Output Dislaying a message on HTML
     let message =`To fund an annuity that pays $${payout} monthly for ${numberOfYears} years and earns an expected ${interestRateValue * 100}% interest, you would need to invest $${presentValue.toFixed(2)}`;
     document.getElementById('output1').innerText = message;
 }
