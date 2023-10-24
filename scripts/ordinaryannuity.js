@@ -1,6 +1,11 @@
 "use strict";
 
-// create a function that calculates present value and include a display message
+//
+//
+//
+
+
+//Create a function that calculates present value and include a display message
 function calculateFunction() {
     //Input - Intitialize the variables
     const payout = parseFloat(document.getElementById('monthly-payout').value);
@@ -9,18 +14,17 @@ function calculateFunction() {
     const totalPayments = numberOfYears * 12;  //number of monthly payments
     const interestMonthly = interestRateValue / 12 // monthly interest
     
-    // algoritme or calculation or transformation
-    //equation for present value annuity
+    //Calculate present value using the annuity formula
     //PV = MonthlyPayment*[(1-(1 + monthlyRate)^(-numberOfMonths))/monthlyRate]
     const presentValue = (payout * (1 - Math.pow(1 + interestMonthly, -totalPayments))) / interestMonthly;
 
 
     //Output Dislaying a message on HTML or in a alert
-      let message =`To fund an annuity that pays $${payout} monthly for ${numberOfYears} years and earns an expected ${interestRateValue * 100}% interest, you would need to invest $${presentValue.toFixed(2)}`;
+    let message =`To fund an annuity that pays $${payout} monthly for ${numberOfYears} years and earns an expected ${interestRateValue * 100}% interest, you would need to invest $${presentValue.toFixed(2)}`;
     document.getElementById('output1').innerText = message;
 }
 
-// create a variable for buttons by referencing it through id
+//Create a variable for buttons by referencing it through id
 const calculateBtn = document.getElementById('calculate-Btn');
-// add an event listener, by clicking the button, it will execute calculateFunction
+//Add an event listener, by clicking the button, it will execute calculateFunction
 calculateBtn.addEventListener('click', calculateFunction);
