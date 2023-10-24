@@ -14,7 +14,9 @@ function calculateFunction() {
     const totalInterest = totalPaid - principalValue; //calculates the total interest
     
     //displays a message
-    document.getElementById('output1').innerText = "A $" + principalValue + " loan at " + (interestRateValue*100).toFixed(3) + "% for 15 years would have a $" + monthlyPayment.toFixed(2) + "/mo payment with a total interest of $" + totalInterest.toFixed(2);
+    document.getElementById('output1').innerText = "A $" + principalValue + " loan at " + (interestRateValue*100).toFixed(3) + "% for " + loanTermValue
+     + " years would have a $" + monthlyPayment.toFixed(2)
+     + "/mo payment with a total interest of $" + totalInterest.toFixed(2);
 }
 
 // create a variable for the calculate button by referencing it through id

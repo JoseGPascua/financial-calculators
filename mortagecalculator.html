@@ -17,17 +17,14 @@
   <header>
 
     <!-- navigation bar -->  
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm bg-light p-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">My company name</a>
+        <a class="navbar-brand" href="index.html">Financial Calculator</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Calculators
@@ -35,14 +32,10 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="mortagecalculator.html">Mortgage Calculator</a></li>
                 <li><a class="dropdown-item" href="futurevaluecalculator.html">Future Value Calculator</a></li>
-                <li><a class="dropdown-item" href="#">Present Value of an ordinary annuity</a></li>
+                <li><a class="dropdown-item" href="presentvaluecalculator.html">Present Value of an ordinary annuity</a></li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -56,24 +49,24 @@
     <!-- Section inputs information from user -->
     <section class="container border py-3">
         <h5 class="text-center mb-3">Input your Loan information</h5>
-        <!-- div to display the input text boxes -->
+        <!-- div to display the input field boxes -->
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-12 col-md-12 col-lg-6">
                 <label for="principal-amount" class="form-label">Principal Loan Amount</label>
                 <div class="input-group mb-3">
-                    <input id="principal-amount" type="text" class="form-control" placeholder="Enter Loan Amount">
+                    <input id="principal-amount" type="number" class="form-control" placeholder="Enter Loan Amount">
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <label for="interest-rate" class="form-label">Interest Rate</label>
                 <div class="input-group mb-3">
-                    <input id="interest-rate" type="text" class="form-control" placeholder="Enter Interest Rate">
+                    <input id="interest-rate" type="number" class="form-control" placeholder="Enter Interest Rate">
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <label for="loan-length" class="form-label">Length of Loan</label>
                 <div class="input-group mb-3">
-                    <input id="loan-length" type="text" class="form-control" placeholder="Enter in Years">
+                    <input id="loan-length" type="number" class="form-control" placeholder="Enter in Years">
                 </div>
             </div>
         </div>

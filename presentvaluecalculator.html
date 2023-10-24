@@ -9,42 +9,33 @@
 
   <!-- Bootstrap CSS v5.3.2 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!-- External CSS Style Sheet -->
-  <link rel="stylesheet" href="css/style.css">
-
+  
 </head>
 
 <body>
     
   <header>
 
-    <!-- place navbar here -->  
-    <nav class="navbar navbar-expand-sm">
+    <!-- navigation bar -->  
+    <nav class="navbar navbar-expand-sm bg-light p-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">My company name</a>
+        <a class="navbar-brand" href="index.html">Financial Calculator</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Calculators
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Mortgage Calculator</a></li>
-                <li><a class="dropdown-item" href="#">Future Value Calculator</a></li>
-                <li><a class="dropdown-item" href="#">Present Value of an ordinary annuity</a></li>
+                <li><a class="dropdown-item" href="mortagecalculator.html">Mortgage Calculator</a></li>
+                <li><a class="dropdown-item" href="futurevaluecalculator.html">Future Value Calculator</a></li>
+                <li><a class="dropdown-item" href="presentvaluecalculator.html">Present Value of an ordinary annuity</a></li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -52,12 +43,47 @@
   
   <!-- Create the basic main page layout with a brief description and a link to each calculator -->
   <main>
-    
+    <div class="container my-3 py-3">
+        <h1 class="text-center">Present Value of an Ordinary Annuity</h1>
+    </div>
+    <!-- Section inputs information from user -->
+    <section class="container border py-3">
+        <h5 class="text-center mb-3">Input your information</h5>
+        <!-- div to display the input field boxes -->
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+                <label for="monthly-payout" class="form-label">Monthly Payout</label>
+                <div class="input-group mb-3">
+                    <input id="monthly-payout" type="number" class="form-control" placeholder="Enter Amount">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <label for="interest-rate" class="form-label">Expected Interest Rate</label>
+                <div class="input-group mb-3">
+                    <input id="interest-rate" type="number" class="form-control" placeholder="Enter Rate">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <label for="length" class="form-label">Years to Pay Out </label>
+                <div class="input-group mb-3">
+                    <input id="length" type="number" class="form-control" placeholder="Enter in Years">
+                </div>
+            </div>
+        </div>
+        <!-- div to separate the calculate button -->
+        <div class="row">
+            <div class="col-6">
+                <button id="calculate-Btn" type="button" class="btn btn-primary">Calculate</button>
+            </div>
+        </div>
+        <!-- Blank space where the calculation information will be displayed after hitting the calculate button -->
+        <p class="my-3" id="output1"></p>
+    </section>
 
   </main>
 
   <!-- Add your JS here -->
-  <script src="scripts/app.js"></script>
+  <script src="scripts/ordinaryannuity.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
