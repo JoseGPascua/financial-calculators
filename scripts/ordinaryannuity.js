@@ -13,7 +13,6 @@ function calculateFunction() {
     //PV = MonthlyPayment*[(1-(1 + monthlyRate)^(-numberOfMonths))/monthlyRate]
     const presentValue = (payout * (1 - Math.pow(1 + interestMonthly, -totalPayments))) / interestMonthly;
 
-
     //Output Dislaying a message on HTML
     let message =`To fund an annuity that pays $${payout} monthly for ${numberOfYears} years and earns an expected ${interestRateValue * 100}% interest, you would need to invest $${presentValue.toFixed(2)}`;
     document.getElementById('output1').innerText = message;
